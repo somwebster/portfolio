@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
-<head>
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><!--<![endif]--><head>
+    
+    
 
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Ceevee - Free Responsive HTML5/CSS3 Template</title>
+	<title>Fn-connect</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -25,53 +23,106 @@
    <!-- Script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
+	<script>
+		$('.container').on('click', function () {
+  $('.card').toggleClass('flipped');
+});
+	</script>
 
    <!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="favicon.png" >
+	<link rel="shortcut icon" href="favicon.png">
+    <style>
+        .container {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  -webkit-perspective: 800px;
+  -ms-perspective: 800px;
+  perspective: 800px;
+  border-radius: 4px;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+.card div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  background: #fff;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -o-box-pack: center;
+  justify-content: center;
+  -o-box-align: center;
+  align-items: center;
+  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #47525d;
+}
+.card .back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.card.flipped {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+    
+    
+    
+    
+    </style> 
 
 </head>
 
-<body>
+<body style="">
 
    <!-- Header
    ================================================== -->
-   <header id="home">
+   <header id="home" style="height: 704px;">
 
-      <nav id="nav-wrap">
+      <nav id="nav-wrap" class="opaque" style="display: block;">
 
          <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
 	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-            <li><a class="smoothscroll" href="#about">About</a></li>
-	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
-            <li><a class="smoothscroll" href="#portfolio">Works</a></li>
+            <li class=""><a class="smoothscroll" href="#home">Home</a></li>
+            <li class=""><a class="smoothscroll" href="#about">About</a></li>
+	         <li class="current"><a class="smoothscroll" href="#resume">Resume</a></li>
+            <li class=""><a class="smoothscroll" href="#portfolio">Works</a></li>
             <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
             <li><a class="smoothscroll" href="#contact">Contact</a></li>
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
 
-">
+"&gt;
       <div class="row banner">
          <div class="banner-text">
 
 
-            <h1 class="responsive-headline">I'm Ritwiz Kaustubh.</h1>
+            <h1 class="responsive-headline" style="font-size: 90px;">I'm Ritwiz Kaustubh.</h1>
             <!-- put some content here -->
-            </h3>  <a class="smoothscroll" href="#about">about me</a>.</h3>
-            <hr />
-            <ul class="social">
-               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-               <li><a href="#"><i class="fa fa-skype"></i></a></li>
-            </ul>
+              <a class="smoothscroll" href="#about">about me</a>.
+            <hr>
+            
          </div>
       </div>
 
@@ -90,7 +141,7 @@
 
          <div class="three columns">
 
-            <img class="profile-pic"  src="images/profilepic.jpg" alt="" />
+            <img class="profile-pic" src="images/profilepic.jpg" alt="">
 
          </div>
 
@@ -98,26 +149,15 @@
 
             <h2>About Me</h2>
 
-            <p>Myself Ritwiz, an IT expert by profession. Being a computer enthusiast, it's not easy to stick to only one field when plethora of interesting things exists. My area of interest includes App Development, web development, UI/UX Designing, AI, Machine learning. 
+            <p style="
+    color: #c1b8b8;
+">Myself Ritwiz, an IT expert by profession. Being a computer enthusiast, it's not easy to stick to only one field when plethora of interesting things exists. My area of interest includes App Development, web development, UI/UX Designing, AI, Machine learning. 
 I am still a noob in the world of technology, with each passing day I am working hard to sharpen my skills and hence increase my experience to become a professional. Currently working as a freelancer, i have worked on many projects and dealt with many clients across India. I am a tech enthusiast looking forward to hold a niche in a world of growing technologies.
 
             </p>
 
             <div class="row">
 
-               <!--div class="columns contact-details">
-
-                  <h2>Contact Details</h2>
-                  <p class="address">
-						   <span>Jonathan Doe</span><br>
-						   <span>1600 Amphitheatre Parkway<br>
-						         Mountain View, CA 94043 US
-                     </span><br>
-						   <span>(123)456-7890</span><br>
-                     <span>anyone@website.com</span>
-					   </p>
-
-               </div-->
 
                <div class="columns download">
                   <p>
@@ -155,14 +195,9 @@ I am still a noob in the world of technology, with each passing day I am working
                <div class="six columns">
 
                   <h3>Vedant Solutions</h3>
-                  <p class="info">Intern<span>&bull;</span> <em class="date">December</em>2016</p>
+                  <p class="info">Intern<span>•</span> <em class="date">December</em>2016</p>
 
-                  <!--p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-                  ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
-                  </p-->
+              
 
                </div>
 
@@ -171,16 +206,29 @@ I am still a noob in the world of technology, with each passing day I am working
                <div class="six columns">
 
                   <h3>IIT (ISM) Dhanbad </h3>
-                  <p class="info">Intern<span>&bull;</span> <em class="date">June 2017</em></p>
-
-                  <!--p>
-                  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
-                  ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
-                  </p-->
+                  <p class="info">Intern<span>•</span> <em class="date">June 2017</em></p>
 
                </div>
+
+            </div><div class="row item">
+
+               <div class="nine columns">
+
+                  <h3>Positions of Responsbility</h3>
+		       <p class="info">
+		       <ul>
+			     <li>IBNC official ambassador 
+			     <li>  Web Developer at Model United Nations SRM Univ Ramapuram campus 
+                             <li>Technical head at Department club of SRM Univ Ramapuram campus (dept of CSE)
+                             <li>Organizer and host of Innoverience(Paper presentation conference) at SRM Ramapuram, Chennai
+		       </ul>	     
+		       </p>
+
+               </div>
+
+            
+
+               
 
             </div> <!-- item end -->
 
@@ -208,12 +256,22 @@ I am still a noob in the world of technology, with each passing day I am working
 				<div class="bars">
 
 				   <ul class="skills">
-					   <li><span class="bar-expand photoshop"></span><em>HTML/CSS</em></li>
-                  <li><span class="bar-expand illustrator"></span><em>PHPr</em></li>
-						<li><span class="bar-expand wordpress"></span><em>My SQL</em></li>
-						<li><span class="bar-expand css"></span><em>React JS</em></li>
+					   <li><span class="bar-expand photoshop" style="
+    width:  90%;
+"></span><em>HTML/CSS</em></li>
+                  <li><span class="bar-expand illustrator" style="
+    width:  90%;
+"></span><em>PHPr</em></li>
+						<li><span class="bar-expand wordpress" style="
+    width:  80%;
+"></span><em>My SQL</em></li>
+						<li><span class="bar-expand css" style="
+    width: 60%;
+"></span><em>React JS</em></li>
 						<li><span class="bar-expand html5"></span><em>JQuery</em></li>
-                  <li><span class="bar-expand jquery"></span><em>JavaScript</em></li>
+                  <li><span class="bar-expand jquery" style="
+    width: 90%;
+"></span><em>JavaScript</em></li>
                     <li><span class="bar-expand jquery"></span><em>Machine Learning</em></li>
 					</ul>
 
@@ -242,12 +300,48 @@ I am still a noob in the world of technology, with each passing day I am working
 </p>
 
                   <p>
-                     <ul>
-                      <li>SRM University</li></li>
+                     </p><ul>
+                      <li>SRM University</li>
 CGPA : 8.28/10
-</li>
+
                      </ul>
-                 </p>
+                 <p></p>
+
+               </div>
+
+            </div><div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>University of Life</h3>
+                  <p class="info">Bachelor of Technology (B.Tech), Computer Science (2015 - 2019)
+</p>
+
+                  <p>
+                     </p><ul>
+                      <li>SRM University</li>
+CGPA : 8.28/10
+
+                     </ul>
+                 <p></p>
+
+               </div>
+
+            </div><div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>University of Life</h3>
+                  <p class="info">Bachelor of Technology (B.Tech), Computer Science (2015 - 2019)
+</p>
+
+                  <p>
+                     </p><ul>
+                      <li>SRM University</li>
+CGPA : 8.28/10
+
+                     </ul>
+                 <p></p>
 
                </div>
 
@@ -258,7 +352,7 @@ CGPA : 8.28/10
                <div class="twelve columns">
 
                   <h3>School of Cool Designers</h3>
-                  <p class="info">B.A. Degree in Graphic Design <span>&bull;</span> <em class="date">March 2003</em></p>
+                  <p class="info">B.A. Degree in Graphic Design <span>•</span> <em class="date">March 2003</em></p>
 
                   <p>
                   This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
@@ -292,114 +386,72 @@ CGPA : 8.28/10
             <!-- portfolio-wrapper -->
             <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
 
-          	   <div class="columns portfolio-item">
-                  <div class="item-wrap">
+          	   
+<div class="columns portfolio-item">
+                  
+<div class="container">
+  <div class="card">
+    <div class="front">Click to flip</div>
+    <div class="back">Yo, what up?</div>
+  </div>
+</div>
+ 
+    
+    
+    
+    
+    </div>
+<div class="columns portfolio-item">
+                  
+<div class="container">
+  <div class="card">
+    <div class="front">Click to flip</div>
+    <div class="back">Yo, what up?</div>
+  </div>
+</div>
+ 
+    
+    
+    
+    
+    </div>
+<div class="columns portfolio-item">
+                  
+<div class="container">
+  <div class="card">
+    <div class="front">Click to flip</div>
+    <div class="back">Yo, what up?</div>
+  </div>
+</div>
+ 
+    
+    
+    
+    
+    </div><div class="columns portfolio-item">
+                  
+<div class="container">
+  <div class="card">
+    <div class="front">Click to flip</div>
+    <div class="back">Yo, what up?</div>
+  </div>
+</div>
+ 
+    
+    
+    
+    
+    </div> <!-- item end -->
 
-                     <a href="https://github.com/ritwizme" title="">
-                        <img alt="" src="https://freeiconshop.com/wp-content/uploads/edd/bookmark-open-flat.png" style="
-    background: #ebeeee;
-">
-                        <div class="overlay">
-                           <div class="portfolio-item-meta">
-          					      <h5>Oru Doctors</h5>
-                              <p>Web Development</p>
-          					   </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
+                <!-- item end -->
 
-                  </div>
-          		</div> <!-- item end -->
+                
 
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
+                <!-- item end -->
 
-                     <a href="https://github.com/ritwizme" title="">
-                     <img alt="" src="https://freeiconshop.com/wp-content/uploads/edd/bookmark-open-flat.png" style="
-    background: #ebeeee;
-">   <div class="overlay">
-                           <div class="portfolio-item-meta">
-          					      <h5>Curis</h5>
-                              <p>Web Development</p>
-          					   </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
+                <!-- item end -->
 
-                  </div>
-          		</div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="https://github.com/ritwizme" title="">
-                      <img alt="" src="https://freeiconshop.com/wp-content/uploads/edd/bookmark-open-flat.png" style="
-    background: #ebeeee;
-">  <div class="overlay">
-                           <div class="portfolio-item-meta">
-          					      <h5>Kairosodeum</h5>
-                              <p>Webdesign</p>
-          					   </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-          		</div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="https://github.com/ritwizme" title="">
-                      <img alt="" src="https://freeiconshop.com/wp-content/uploads/edd/bookmark-open-flat.png" style="
-    background: #ebeeee;
-">  <div class="overlay">
-                           <div class="portfolio-item-meta">
-          					      <h5>CarParlor</h5>
-                              <p>Web development</p>
-          					   </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-          		</div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="https://github.com/ritwizme" title="">
-                      <img alt="" src="https://freeiconshop.com/wp-content/uploads/edd/bookmark-open-flat.png" style="
-    background: #ebeeee;
-">  <div class="overlay">
-                           <div class="portfolio-item-meta">
-          					      <h5>Stock Price Predictor</h5>
-                              <p>Web Development</p>
-          					   </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-          		</div> <!-- item end -->
-
-               <div class="columns portfolio-item">
-                  <div class="item-wrap">
-
-                     <a href="https://github.com/ritwizme" title="">
-                        <img alt="" src="https://freeiconshop.com/wp-content/uploads/edd/bookmark-open-flat.png" style="
-    background: #ebeeee;
-"> <div class="overlay">
-                           <div class="portfolio-item-meta">
-          					      <h5>Sentiment Analyzer</h5>
-                              <p>AI/ML</p>
-          					   </div>
-                        </div>
-                        <div class="link-icon"><i class="icon-plus"></i></div>
-                     </a>
-
-                  </div>
-          		</div> <!-- item end -->
+                <!-- item end -->
 
                <!--div class="columns portfolio-item">
                   <div class="item-wrap">
@@ -446,7 +498,7 @@ CGPA : 8.28/10
 
          <div id="modal-01" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt="">
 
 		      <div class="description-box">
 			      <h4>Coffee Cup</h4>
@@ -463,7 +515,7 @@ CGPA : 8.28/10
 
          <div id="modal-02" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-console.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-console.jpg" alt="">
 
 		      <div class="description-box">
 			      <h4>Console</h4>
@@ -480,7 +532,7 @@ CGPA : 8.28/10
 
          <div id="modal-03" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-judah.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-judah.jpg" alt="">
 
 		      <div class="description-box">
 			      <h4>Judah</h4>
@@ -497,7 +549,7 @@ CGPA : 8.28/10
 
          <div id="modal-04" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-intothelight.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-intothelight.jpg" alt="">
 
 		      <div class="description-box">
 			      <h4>Into the Light</h4>
@@ -514,7 +566,7 @@ CGPA : 8.28/10
 
          <div id="modal-05" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-farmerboy.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-farmerboy.jpg" alt="">
 
 		      <div class="description-box">
 			      <h4>Farmer Boy</h4>
@@ -531,7 +583,7 @@ CGPA : 8.28/10
 
          <div id="modal-06" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-girl.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-girl.jpg" alt="">
 
 		      <div class="description-box">
 			      <h4>Girl</h4>
@@ -548,7 +600,7 @@ CGPA : 8.28/10
 
          <div id="modal-07" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-origami.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-origami.jpg" alt="">
 
 		      <div class="description-box">
 			      <h4>Origami</h4>
@@ -565,7 +617,7 @@ CGPA : 8.28/10
 
          <div id="modal-08" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-retrocam.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/modals/m-retrocam.jpg" alt="">
 
 		      <div class="description-box">
 			      <h4>Retrocam</h4>
@@ -807,7 +859,7 @@ CGPA : 8.28/10
             </ul>
 
             <ul class="copyright">
-               <li>&copy; Copyright 2018 Fnplus</li>
+               <li>© Copyright 2018 Fnplus</li>
      
             </ul>
 
@@ -829,7 +881,7 @@ CGPA : 8.28/10
 	
 	</script>
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script><script src="js/jquery-1.10.2.min.js"></script>
    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 
    <script src="js/jquery.flexslider.js"></script>
@@ -838,6 +890,7 @@ CGPA : 8.28/10
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
 
-</body>
 
-</html>
+
+
+</body></html>
